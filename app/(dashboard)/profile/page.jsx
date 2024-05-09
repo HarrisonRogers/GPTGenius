@@ -1,7 +1,8 @@
+import { UserProfile } from '@clerk/nextjs'
 import React from 'react'
 
 const ProfilePage = () => {
-  return <div className="text-7xl">ProfilePage</div>
+  return <UserProfile routing="hash" />
 }
 
 export default ProfilePage
