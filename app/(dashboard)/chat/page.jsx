@@ -1,7 +1,12 @@
+import Chat from '@/components/Chat'
 import React from 'react'
 
 const ChatPage = () => {
-  return <div className="text-7xl">ChatPage</div>
+  return (
+    <>
+      <Chat />
+    </>
+  )
 }
 
 export default ChatPage

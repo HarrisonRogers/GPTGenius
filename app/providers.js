@@ -6,7 +6,7 @@ import { Toaster } from 'react-hot-toast'
 const Providers = ({ children }) => {
   return (
     <>
-      <Toaster />
+      <Toaster position="top-center" />
       {children}
     </>
   )
