@@ -32,35 +32,37 @@ const NewTour = () => {
     mutate(destination)
   }
 
-  if (isPending) <span className="loading loading-lg"></span>
-
-  return (
-    <>
-      <form onSubmit={handleSubmit} className="max-2-2xl">
-        <h2 className="mb-4">Select Your Dream Destination</h2>
-        <div className="join w-full">
-          <input
-            type="text"
-            className="input input-bordered join-item w-full"
-            placeholder="city"
-            name="city"
-            required
-          />
-          <input
-            type="text"
-            className="input input-bordered join-item w-full"
-            placeholder="country"
-            name="country"
-            required
-          />
-          <button className="btn btn-primary join-item" type="submit">
-            generate tour
-          </button>
-        </div>
-      </form>
-      <div className="mt-16">{tour ? <TourInfo tour={tour} /> : null}</div>
-    </>
-  )
+  if (isPending) {
+    return <span className="loading loading-lg"></span>
+  } else {
+    return (
+      <>
+        <form onSubmit={handleSubmit} className="max-2-2xl">
+          <h2 className="mb-4">Select Your Dream Destination</h2>
+          <div className="join w-full">
+            <input
+              type="text"
+              className="input input-bordered join-item w-full"
+              placeholder="city"
+              name="city"
+              required
+            />
+            <input
+              type="text"
+              className="input input-bordered join-item w-full"
+              placeholder="country"
+              name="country"
+              required
+            />
+            <button className="btn btn-primary join-item" type="submit">
+              generate tour
+            </button>
+          </div>
+        </form>
+        <div className="mt-16">{tour ? <TourInfo tour={tour} /> : null}</div>
+      </>
+    )
+  }
 }
 
 export default NewTour

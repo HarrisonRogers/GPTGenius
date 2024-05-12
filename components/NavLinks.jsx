@@ -2,10 +2,10 @@ import Link from 'next/link'
 import React from 'react'
 
 const links = [
-  { href: '/chat', label: 'chat' },
-  { href: '/tours', label: 'tours' },
-  { href: '/tours/new-tour', label: 'new tour' },
-  { href: '/profile', label: 'profile' },
+  { href: '/chat', label: 'Chat' },
+  { href: '/tours', label: 'Tours' },
+  { href: '/tours/new-tour', label: 'New tour' },
+  { href: '/profile', label: 'Profile' },
 ]
 
 const NavLinks = () => {
