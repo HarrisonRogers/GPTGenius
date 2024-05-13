@@ -86,15 +86,19 @@ export const getAllTours = async (searchTerm) => {
     return tours
   }
 
-  const tours = await prisma.tour.findMany({
+  const tours = await prisma?.tour.findMany({
     where: {
       OR: [
         {
           city: {
             contains: searchTerm,
+            mode: 'insensitive',
           },
+        },
+        {
           country: {
             contains: searchTerm,
+            mode: 'insensitive',
           },
         },
       ],

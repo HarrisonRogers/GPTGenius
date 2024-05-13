@@ -34,7 +34,6 @@ const NewTour = () => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget)
     const destination = Object.fromEntries(formData.entries())
-    console.log(destination)
     mutate(destination)
   }
 
