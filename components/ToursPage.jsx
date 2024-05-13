@@ -10,7 +10,6 @@ const ToursPage = () => {
     queryKey: ['tours', searchValue],
     queryFn: () => getAllTours(searchValue),
   })
-  console.log(data)
   return (
     <>
       <form className="max-w-lg mb-12">
