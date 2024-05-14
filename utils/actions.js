@@ -18,6 +18,7 @@ export const generateChatResponse = async (chatMessage) => {
       temperature: 0,
       max_tokens: 100,
     })
+    return { message: res.choices[0].message, tokens: res.usage.total_tokens }
     return res.choices[0].message
   } catch (error) {
     return null
@@ -52,7 +53,7 @@ If you can't find info on exact ${city}, or ${city} does not exist, or it's popu
     if (!tourData.tour) {
       return null
     }
-    return tourData.tour
+    return { tour: tourData.tour, tokens: res.usage.total_tokens }
   } catch (error) {
     console.log(error)
     return null
