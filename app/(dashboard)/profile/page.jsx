@@ -1,10 +1,10 @@
 import { fetchUserTokensById } from '@/utils/actions'
 import { UserProfile } from '@clerk/nextjs'
-import { auth } from '@clerk/nextjs/server'
+import { getAuth } from '@clerk/nextjs/server'
 import React from 'react'
 
 const ProfilePage = async () => {
-  const { userId } = auth()
+  const { userId } = getAuth()
   const currentTokens = await fetchUserTokensById(userId)
   return (
     <div>

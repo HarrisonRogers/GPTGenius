@@ -1,11 +1,11 @@
 import { fetchOrGenerateTokens } from '@/utils/actions'
 import { UserButton } from '@clerk/nextjs'
-import { currentUser, auth } from '@clerk/nextjs/server'
+import { currentUser, getAuth } from '@clerk/nextjs/server'
 import React from 'react'
 
 const MemberProfile = async () => {
   const user = await currentUser()
-  const { userId } = auth()
+  const { userId } = getAuth()
   await fetchOrGenerateTokens(userId)
 
   return (
