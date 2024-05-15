@@ -1,7 +1,7 @@
 import { fetchUserTokensById } from '@/utils/actions'
 import { UserProfile } from '@clerk/nextjs'
-import { auth } from '@clerk/nextjs/server'
 import React from 'react'
+import { auth } from '@clerk/nextjs/server'
 
 const ProfilePage = async () => {
   const { userId } = auth()
